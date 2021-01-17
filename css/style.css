@@ -96,6 +96,25 @@ body {
 .site-nav .selected {
   color: var(--text-accent-color);
 }
+.menu-link .selected {
+  position: relative;
+}
+.site-nav .selected::after {
+  /* position: absolute;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: opacity 250ms;*/
+
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  left: 0;
+  bottom: 0;
+  background-color: var(--button-color);
+  border-radius: 2px;
+}
 
 .adress {
   display: flex;
@@ -464,6 +483,8 @@ body {
 }
 
 .project-list {
+  position: relative;
+
   display: flex;
   flex-wrap: wrap;
 }
@@ -513,7 +534,10 @@ body {
 .project-list .item {
   position: relative;
 }
+
 .new-card {
+  position: absolute;
+
   display: flex;
   justify-content: center;
   align-content: center;
